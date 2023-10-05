@@ -1,0 +1,290 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
+S_0000025a6c8ac9c0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0000025a6c8acb50 .scope package, "adder_pkg" "adder_pkg" 3 1;
+ .timescale 0 0;
+C0000025a6c8b1d40  .class "FullAdder" [5]
+   0: "fa", "b1"
+   1: "fb", "b1"
+   2: "fcin", "b1"
+   3: "fcout", "b1"
+   4: "fsum", "b1"
+ ;
+C0000025a6c8b1cc0  .class "HalfAdder" [4]
+   0: "ha", "b1"
+   1: "hb", "b1"
+   2: "hcout", "b1"
+   3: "hsum", "b1"
+ ;
+S_0000025a6c900420 .scope class, "FullAdder" "FullAdder" 3 20, 3 20 0, S_0000025a6c8acb50;
+ .timescale 0 0;
+S_0000025a6c9005b0 .scope autofunction.void, "fadd" "fadd" 3 34, 3 34 0, S_0000025a6c900420;
+ .timescale 0 0;
+v0000025a6c8ff920_0 .var/cobj "@";
+TD_adder_pkg.FullAdder.fadd ;
+    %load/obj v0000025a6c8ff920_0;
+    %prop/v 0;
+    %pop/obj 1, 0;
+    %load/obj v0000025a6c8ff920_0;
+    %prop/v 1;
+    %pop/obj 1, 0;
+    %xor;
+    %load/obj v0000025a6c8ff920_0;
+    %prop/v 2;
+    %pop/obj 1, 0;
+    %xor;
+    %cast2;
+    %load/obj v0000025a6c8ff920_0;
+    %store/prop/v 4, 1; Store in bool property fsum
+    %pop/obj 1, 0;
+    %load/obj v0000025a6c8ff920_0;
+    %prop/v 0;
+    %pop/obj 1, 0;
+    %load/obj v0000025a6c8ff920_0;
+    %prop/v 1;
+    %pop/obj 1, 0;
+    %and;
+    %load/obj v0000025a6c8ff920_0;
+    %prop/v 1;
+    %pop/obj 1, 0;
+    %load/obj v0000025a6c8ff920_0;
+    %prop/v 2;
+    %pop/obj 1, 0;
+    %and;
+    %or;
+    %load/obj v0000025a6c8ff920_0;
+    %prop/v 2;
+    %pop/obj 1, 0;
+    %load/obj v0000025a6c8ff920_0;
+    %prop/v 0;
+    %pop/obj 1, 0;
+    %and;
+    %or;
+    %cast2;
+    %load/obj v0000025a6c8ff920_0;
+    %store/prop/v 3, 1; Store in bool property fcout
+    %pop/obj 1, 0;
+    %end;
+S_0000025a6c900740 .scope autofunction.obj, "new" "new" 3 28, 3 28 0, S_0000025a6c900420;
+ .timescale 0 0;
+v0000025a6c8ffba0_0 .var/cobj "@";
+v0000025a6c8ff7e0_0 .var/2u "a1", 0 0;
+v0000025a6c8ff880_0 .var/2u "b1", 0 0;
+v0000025a6c8ff060_0 .var/2u "cin1", 0 0;
+TD_adder_pkg.FullAdder.new ;
+    %load/vec4 v0000025a6c8ff7e0_0;
+    %load/obj v0000025a6c8ffba0_0;
+    %store/prop/v 0, 1; Store in bool property fa
+    %pop/obj 1, 0;
+    %load/vec4 v0000025a6c8ff880_0;
+    %load/obj v0000025a6c8ffba0_0;
+    %store/prop/v 1, 1; Store in bool property fb
+    %pop/obj 1, 0;
+    %load/vec4 v0000025a6c8ff060_0;
+    %load/obj v0000025a6c8ffba0_0;
+    %store/prop/v 2, 1; Store in bool property fcin
+    %pop/obj 1, 0;
+    %end;
+S_0000025a6c9008d0 .scope class, "HalfAdder" "HalfAdder" 3 2, 3 2 0, S_0000025a6c8acb50;
+ .timescale 0 0;
+S_0000025a6c900a60 .scope autofunction.void, "hadd" "hadd" 3 14, 3 14 0, S_0000025a6c9008d0;
+ .timescale 0 0;
+v0000025a6c8ff380_0 .var/cobj "@";
+TD_adder_pkg.HalfAdder.hadd ;
+    %load/obj v0000025a6c8ff380_0;
+    %prop/v 0;
+    %pop/obj 1, 0;
+    %load/obj v0000025a6c8ff380_0;
+    %prop/v 1;
+    %pop/obj 1, 0;
+    %xor;
+    %cast2;
+    %load/obj v0000025a6c8ff380_0;
+    %store/prop/v 3, 1; Store in bool property hsum
+    %pop/obj 1, 0;
+    %load/obj v0000025a6c8ff380_0;
+    %prop/v 0;
+    %pop/obj 1, 0;
+    %load/obj v0000025a6c8ff380_0;
+    %prop/v 1;
+    %pop/obj 1, 0;
+    %and;
+    %cast2;
+    %load/obj v0000025a6c8ff380_0;
+    %store/prop/v 2, 1; Store in bool property hcout
+    %pop/obj 1, 0;
+    %end;
+S_0000025a6c900bf0 .scope autofunction.obj, "new" "new" 3 9, 3 9 0, S_0000025a6c9008d0;
+ .timescale 0 0;
+v0000025a6c8ffd80_0 .var/cobj "@";
+v0000025a6c8ff9c0_0 .var/2u "a1", 0 0;
+v0000025a6c8ff6a0_0 .var/2u "b1", 0 0;
+TD_adder_pkg.HalfAdder.new ;
+    %load/vec4 v0000025a6c8ff9c0_0;
+    %load/obj v0000025a6c8ffd80_0;
+    %store/prop/v 0, 1; Store in bool property ha
+    %pop/obj 1, 0;
+    %load/vec4 v0000025a6c8ff6a0_0;
+    %load/obj v0000025a6c8ffd80_0;
+    %store/prop/v 1, 1; Store in bool property hb
+    %pop/obj 1, 0;
+    %end;
+S_0000025a6c8ab0c0 .scope module, "testbench" "testbench" 4 1;
+ .timescale 0 0;
+v0000025a6c90a890_0 .var/cobj "F";
+v0000025a6c90a1b0_0 .var/cobj "H";
+v0000025a6c90a9d0_0 .var "a", 0 0;
+v0000025a6c90b830_0 .var "b", 0 0;
+v0000025a6c90aa70_0 .var "c", 0 0;
+v0000025a6c90acf0_0 .net "fcout", 0 0, L_0000025a6c89d400;  1 drivers
+v0000025a6c90bfb0_0 .net "fsum", 0 0, L_0000025a6c89d2b0;  1 drivers
+v0000025a6c90b150_0 .net "hcout", 0 0, L_0000025a6c89d010;  1 drivers
+v0000025a6c90b5b0_0 .net "hsum", 0 0, L_0000025a6c89d320;  1 drivers
+S_0000025a6c900d80 .scope module, "dut1" "hadder" 4 8, 5 1 0, S_0000025a6c8ab0c0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "ha";
+    .port_info 1 /INPUT 1 "hb";
+    .port_info 2 /OUTPUT 1 "hsum";
+    .port_info 3 /OUTPUT 1 "hcout";
+L_0000025a6c89d320 .functor XOR 1, v0000025a6c90a9d0_0, v0000025a6c90b830_0, C4<0>, C4<0>;
+L_0000025a6c89d010 .functor AND 1, v0000025a6c90a9d0_0, v0000025a6c90b830_0, C4<1>, C4<1>;
+v0000025a6c8ff2e0_0 .net "ha", 0 0, v0000025a6c90a9d0_0;  1 drivers
+v0000025a6c8fff60_0 .net "hb", 0 0, v0000025a6c90b830_0;  1 drivers
+v0000025a6c8ff560_0 .net "hcout", 0 0, L_0000025a6c89d010;  alias, 1 drivers
+v0000025a6c8ffe20_0 .net "hsum", 0 0, L_0000025a6c89d320;  alias, 1 drivers
+S_0000025a6c900f10 .scope module, "dut2" "fadder" 4 9, 6 1 0, S_0000025a6c8ab0c0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "fa";
+    .port_info 1 /INPUT 1 "fb";
+    .port_info 2 /INPUT 1 "fcin";
+    .port_info 3 /OUTPUT 1 "fsum";
+    .port_info 4 /OUTPUT 1 "fcout";
+L_0000025a6c89d630 .functor XOR 1, v0000025a6c90a9d0_0, v0000025a6c90b830_0, C4<0>, C4<0>;
+L_0000025a6c89d2b0 .functor XOR 1, L_0000025a6c89d630, v0000025a6c90aa70_0, C4<0>, C4<0>;
+L_0000025a6c89cf30 .functor AND 1, v0000025a6c90a9d0_0, v0000025a6c90b830_0, C4<1>, C4<1>;
+L_0000025a6c89d6a0 .functor AND 1, v0000025a6c90b830_0, v0000025a6c90aa70_0, C4<1>, C4<1>;
+L_0000025a6c89c980 .functor OR 1, L_0000025a6c89cf30, L_0000025a6c89d6a0, C4<0>, C4<0>;
+L_0000025a6c89d710 .functor AND 1, v0000025a6c90aa70_0, v0000025a6c90a9d0_0, C4<1>, C4<1>;
+L_0000025a6c89d400 .functor OR 1, L_0000025a6c89c980, L_0000025a6c89d710, C4<0>, C4<0>;
+v0000025a6c8ffc40_0 .net *"_ivl_0", 0 0, L_0000025a6c89d630;  1 drivers
+v0000025a6c8ff100_0 .net *"_ivl_10", 0 0, L_0000025a6c89d710;  1 drivers
+v0000025a6c8ff4c0_0 .net *"_ivl_4", 0 0, L_0000025a6c89cf30;  1 drivers
+v0000025a6c8ffec0_0 .net *"_ivl_6", 0 0, L_0000025a6c89d6a0;  1 drivers
+v0000025a6c8ffce0_0 .net *"_ivl_8", 0 0, L_0000025a6c89c980;  1 drivers
+v0000025a6c8ff1a0_0 .net "fa", 0 0, v0000025a6c90a9d0_0;  alias, 1 drivers
+v0000025a6c8ff740_0 .net "fb", 0 0, v0000025a6c90b830_0;  alias, 1 drivers
+v0000025a6c8ff600_0 .net "fcin", 0 0, v0000025a6c90aa70_0;  1 drivers
+v0000025a6c8ffa60_0 .net "fcout", 0 0, L_0000025a6c89d400;  alias, 1 drivers
+v0000025a6c8ff240_0 .net "fsum", 0 0, L_0000025a6c89d2b0;  alias, 1 drivers
+S_0000025a6c909100 .scope task, "varify" "varify" 4 23, 4 23 0, S_0000025a6c8ab0c0;
+ .timescale 0 0;
+v0000025a6c8ff420_0 .var "a", 0 0;
+v0000025a6c90a750_0 .var "b", 0 0;
+v0000025a6c90bf10_0 .var "c", 0 0;
+TD_testbench.varify ;
+    %alloc S_0000025a6c900bf0;
+    %new/cobj C0000025a6c8b1cc0;
+    %load/vec4 v0000025a6c8ff420_0;
+    %cast2;
+    %load/vec4 v0000025a6c90a750_0;
+    %cast2;
+    %store/vec4 v0000025a6c8ff6a0_0, 0, 1;
+    %store/vec4 v0000025a6c8ff9c0_0, 0, 1;
+    %store/obj v0000025a6c8ffd80_0;
+    %callf/obj TD_adder_pkg.HalfAdder.new, S_0000025a6c900bf0;
+    %load/obj v0000025a6c8ffd80_0;
+    %free S_0000025a6c900bf0;
+    %store/obj v0000025a6c90a1b0_0;
+    %alloc S_0000025a6c900a60;
+    %load/obj v0000025a6c90a1b0_0;
+    %store/obj v0000025a6c8ff380_0;
+    %callf/void TD_adder_pkg.HalfAdder.hadd, S_0000025a6c900a60;
+    %free S_0000025a6c900a60;
+    %alloc S_0000025a6c900740;
+    %new/cobj C0000025a6c8b1d40;
+    %load/vec4 v0000025a6c8ff420_0;
+    %cast2;
+    %load/vec4 v0000025a6c90a750_0;
+    %cast2;
+    %load/vec4 v0000025a6c90bf10_0;
+    %cast2;
+    %store/vec4 v0000025a6c8ff060_0, 0, 1;
+    %store/vec4 v0000025a6c8ff880_0, 0, 1;
+    %store/vec4 v0000025a6c8ff7e0_0, 0, 1;
+    %store/obj v0000025a6c8ffba0_0;
+    %callf/obj TD_adder_pkg.FullAdder.new, S_0000025a6c900740;
+    %load/obj v0000025a6c8ffba0_0;
+    %free S_0000025a6c900740;
+    %store/obj v0000025a6c90a890_0;
+    %alloc S_0000025a6c9005b0;
+    %load/obj v0000025a6c90a890_0;
+    %store/obj v0000025a6c8ff920_0;
+    %callf/void TD_adder_pkg.FullAdder.fadd, S_0000025a6c9005b0;
+    %free S_0000025a6c9005b0;
+    %delay 1, 0;
+    %end;
+    .scope S_0000025a6c8ab0c0;
+T_5 ;
+    %pushi/vec4 10, 0, 32;
+T_5.0 %dup/vec4;
+    %pushi/vec4 0, 0, 32;
+    %cmp/s;
+    %jmp/1xz T_5.1, 5;
+    %jmp/1 T_5.1, 4;
+    %pushi/vec4 1, 0, 32;
+    %sub;
+    %vpi_func 4 13 "$random" 32 {0 0 0};
+    %pad/s 1;
+    %store/vec4 v0000025a6c90a9d0_0, 0, 1;
+    %vpi_func 4 14 "$random" 32 {0 0 0};
+    %pad/s 1;
+    %store/vec4 v0000025a6c90b830_0, 0, 1;
+    %vpi_func 4 15 "$random" 32 {0 0 0};
+    %pad/s 1;
+    %store/vec4 v0000025a6c90aa70_0, 0, 1;
+    %load/vec4 v0000025a6c90a9d0_0;
+    %store/vec4 v0000025a6c8ff420_0, 0, 1;
+    %load/vec4 v0000025a6c90b830_0;
+    %store/vec4 v0000025a6c90a750_0, 0, 1;
+    %load/vec4 v0000025a6c90aa70_0;
+    %store/vec4 v0000025a6c90bf10_0, 0, 1;
+    %fork TD_testbench.varify, S_0000025a6c909100;
+    %join;
+    %vpi_call/w 4 17 "$display", "a, b, c = %b, %b, %b", v0000025a6c90a9d0_0, v0000025a6c90b830_0, v0000025a6c90aa70_0 {0 0 0};
+    %load/obj v0000025a6c90a1b0_0;
+    %prop/v 3;
+    %pop/obj 1, 0;
+    %load/obj v0000025a6c90a1b0_0;
+    %prop/v 2;
+    %pop/obj 1, 0;
+    %load/obj v0000025a6c90a890_0;
+    %prop/v 4;
+    %pop/obj 1, 0;
+    %load/obj v0000025a6c90a890_0;
+    %prop/v 3;
+    %pop/obj 1, 0;
+    %vpi_call/w 4 18 "$display", "hsum, hcout, fsum, fcout = %b, %b, %b, %b", S<3,vec4,u1>, S<2,vec4,u1>, S<1,vec4,u1>, S<0,vec4,u1> {4 0 0};
+    %jmp T_5.0;
+T_5.1 ;
+    %pop/vec4 1;
+    %vpi_call/w 4 20 "$finish" {0 0 0};
+    %end;
+    .thread T_5;
+# The file index is used to find the file name in the following table.
+:file_names 7;
+    "N/A";
+    "<interactive>";
+    "-";
+    "adder_pkg.sv";
+    "testbench.sv";
+    "hadder.sv";
+    "fadder.sv";
