@@ -9,7 +9,7 @@ module testbench;
     fadder dut2(.fa(a),.fb(b),.fcin(c),.fsum(fsum),.fcout(fcout));
     
     initial begin
-        repeat(10) begin
+        repeat(10) begin  //repeat 10 times = 10 random inputs.
             a=$random;
             b=$random;
             c=$random;
