@@ -10,7 +10,7 @@ module testbench;
     
     initial begin
         repeat(10) begin  //repeat 10 times = 10 random inputs.
-            a=$random;
+            a=$random;    //generate random values
             b=$random;
             c=$random;
             varify(a,b,c);
